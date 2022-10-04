@@ -97,6 +97,7 @@ builder.Services.AddBlazorServices();
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 // OrderReservator
+builder.Services.AddScoped<IOrderReservator, OrderReservator>();
 builder.Services.Configure<OrderReservatorConfiguration>(builder.Configuration.GetRequiredSection(OrderReservatorConfiguration.ConfigPath));
 
 var app = builder.Build();
